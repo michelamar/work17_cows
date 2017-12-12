@@ -21,7 +21,10 @@ var distance = function (x0, y0, x1, y1) {
 
 
 var findIt = function(e) {
-  /* YOUR IMPLEMENTATION */
+    var x = event.clientX;
+    var y = event.clientY;
+    var dist = (x, y, targetX, targetY);
+    //changeColor(dist%50);
 };
 
 /*
