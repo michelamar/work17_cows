@@ -14,7 +14,9 @@ console.log( "box width: " + boxWidth );
 
 //calculate distance between current mouse pos and target
 var distance = function (x0, y0, x1, y1) {
-  /* YOUR IMPLEMENTATION */
+    var xdist = x0-x1;
+    var ydist = y0-y1;
+    return ((xdist**2) + (ydist**2)) ** (1/2)
 };
 
 
