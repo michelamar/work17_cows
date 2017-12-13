@@ -12,8 +12,8 @@ var targetY = Math.random() * boxHeight;
 console.log( "box height: " + boxHeight );
 console.log( "box width: " + boxWidth );
 
-console.log( "target height: " + boxHeight/2 );
-console.log( "target width: " + boxWidth/2 );
+console.log( "target x: " + targetX );
+console.log( "target y: " + targetY );
 //calculate distance between current mouse pos and target
 var distance = function (x0, y0, x1, y1) {
     var xdist = x0-x1;
@@ -29,7 +29,7 @@ var findIt = function (e) {
     var x = e.clientX;
     var y = e.clientY;
     var dist = distance(x,y,targetX,targetY);
-    if(dist < 10){
+    if(dist < 20){
 	document.write("MOOOOOOO!!!!!!!!!!!!!");
 	return;
     }
@@ -45,7 +45,7 @@ var findIt = function (e) {
 
 //chooses a color and changes to it based i=on increments of distances (50 px)
 var changeColor = function( dist ){
-    var color = (`rgb(${dist}, 0, 0)`);
+    var color = (`rgb(${dist}, 0, ${dist})`);
     console.log(color);
     document.body.style.backgroundColor = color;
 };
